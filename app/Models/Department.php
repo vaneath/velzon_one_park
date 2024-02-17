@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Department extends Model
 {
-    use HasFactory;
+
+  use HasFactory;
+
+  protected $fillable = [
+    'name',
+    'abbr',
+  ];
 }
