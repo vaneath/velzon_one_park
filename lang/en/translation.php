@@ -2,6 +2,7 @@
 return [
     "menu"=>"Menu",
     "dashboards"=>"Dashboards",
+    "employees"=>"Employees",
     "analytics"=>"Analytics",
     "crm"=>"CRM",
     "ecommerce"=>"Ecommerce",
