@@ -392,6 +392,11 @@
                     </div>
                 </li> <!-- end Dashboard Menu -->
 
+                <li class="nav-item">
+                  <a class="nav-link menu-link" href="employees">
+                      <i class="ri-honour-line"></i> <span>@lang('translation.employees')</span>
+                  </a>
+                </li>
 
                 <li class="menu-title"><i class="ri-more-fill"></i> <span>@lang('translation.pages')</span></li>
 
