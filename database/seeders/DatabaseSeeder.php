@@ -26,7 +26,6 @@ class DatabaseSeeder extends Seeder
       'role' => 1,
       'department_id' => Department::all()->random()->id,
       'position_id' => Position::all()->random()->id,
-      'password' => 'password',
     ]);
   }
 }

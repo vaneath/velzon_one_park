@@ -44,16 +44,16 @@
                                 <form action="<?php echo e(route('login')); ?>" method="POST">
                                     <?php echo csrf_field(); ?>
                                     <div class="mb-3">
-                                        <label for="username" class="form-label">Username <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control <?php $__errorArgs = ['email'];
+                                        <label for="user_id" class="form-label">User Id <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control <?php $__errorArgs = ['user_id'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('email', 'admin@themesbrand.com')); ?>" id="username" name="email" placeholder="Enter username">
-                                        <?php $__errorArgs = ['email'];
+unset($__errorArgs, $__bag); ?>" value="<?php echo e(old('user_id', '123')); ?>" id="user_id" name="user_id" placeholder="Enter username">
+                                        <?php $__errorArgs = ['user_id'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -80,7 +80,7 @@ if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>" name="password" placeholder="Enter password" id="password-input" value="12345678">
+unset($__errorArgs, $__bag); ?>" name="password" placeholder="Enter password" id="password-input" value="password">
                                             <button class="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted password-addon" type="button" id="password-addon"><i class="ri-eye-fill align-middle"></i></button>
                                             <?php $__errorArgs = ['password'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
@@ -142,7 +142,7 @@ unset($__errorArgs, $__bag); ?>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="text-center">
-                        <p class="mb-0 text-muted">&copy; <script>document.write(new Date().getFullYear())</script> Velzon. Crafted with <i class="mdi mdi-heart text-danger"></i> by Themesbrand</p>
+                        <p class="mb-0 text-muted">&copy; <script>document.write(new Date().getFullYear())</script> One Park <i class="mdi mdi-heart text-danger"></i></p>
                     </div>
                 </div>
             </div>
