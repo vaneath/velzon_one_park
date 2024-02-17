@@ -1,22 +1,21 @@
-@extends('layouts.master')
-@section('title')
-    @lang('translation.widgets')
-@endsection
-@section('css')
+<?php $__env->startSection('title'); ?>
+    <?php echo app('translator')->get('translation.widgets'); ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('css'); ?>
     <!-- plugin css -->
-    <link href="{{ URL::asset('build/libs/jsvectormap/css/jsvectormap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="<?php echo e(URL::asset('build/libs/jsvectormap/css/jsvectormap.min.css')); ?>" rel="stylesheet" type="text/css" />
 
-    <link href="{{ URL::asset('build/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" />
-@endsection
-@section('content')
-    @component('components.breadcrumb')
-        @slot('li_1')
+    <link href="<?php echo e(URL::asset('build/libs/swiper/swiper-bundle.min.css')); ?>" rel="stylesheet" />
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+    <?php $__env->startComponent('components.breadcrumb'); ?>
+        <?php $__env->slot('li_1'); ?>
             Velzon
-        @endslot
-        @slot('title')
+        <?php $__env->endSlot(); ?>
+        <?php $__env->slot('title'); ?>
             Widgets
-        @endslot
-    @endcomponent
+        <?php $__env->endSlot(); ?>
+    <?php echo $__env->renderComponent(); ?>
 
     <div class="row">
         <div class="col-12">
@@ -441,7 +440,7 @@
                         </div>
                     </div>
                     <div class="mb-4 pb-2">
-                        <img src="{{ URL::asset('build/images/companies/img-3.png') }}" alt="" class="avatar-sm">
+                        <img src="<?php echo e(URL::asset('build/images/companies/img-3.png')); ?>" alt="" class="avatar-sm">
                     </div>
                     <a href="#!">
                         <h6 class="fs-15 fw-semibold">Marketing Director <span class="text-muted fs-13">(2-4 Yrs
@@ -466,7 +465,7 @@
                         </div>
                     </div>
                     <div class="mb-4 pb-2">
-                        <img src="{{ URL::asset('build/images/companies/img-4.png') }}" alt="" class="avatar-sm">
+                        <img src="<?php echo e(URL::asset('build/images/companies/img-4.png')); ?>" alt="" class="avatar-sm">
                     </div>
                     <a href="#!">
                         <h6 class="fs-15 fw-semibold">Sr. Web Designer <span class="text-muted fs-13">(2+ Yrs Exp.)</span>
@@ -491,7 +490,7 @@
                         </div>
                     </div>
                     <div class="mb-4 pb-2">
-                        <img src="{{ URL::asset('build/images/companies/img-6.png') }}" alt="" class="avatar-sm">
+                        <img src="<?php echo e(URL::asset('build/images/companies/img-6.png')); ?>" alt="" class="avatar-sm">
                     </div>
                     <a href="#!">
                         <h6 class="fs-15 fw-semibold">Sr. Web Designer <span class="text-muted fs-13">(2+ Yrs Exp.)</span>
@@ -516,7 +515,7 @@
                         </div>
                     </div>
                     <div class="mb-4 pb-2">
-                        <img src="{{ URL::asset('build/images/companies/img-8.png') }}" alt="" class="avatar-sm">
+                        <img src="<?php echo e(URL::asset('build/images/companies/img-8.png')); ?>" alt="" class="avatar-sm">
                     </div>
                     <a href="#!">
                         <h6 class="fs-15 fw-semibold">Sr. Web Designer <span class="text-muted fs-13">(2+ Yrs Exp.)</span>
@@ -563,7 +562,7 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="px-3">
-                                <img src="{{ URL::asset('build/images/user-illustarator-2.png') }}" class="img-fluid" alt="">
+                                <img src="<?php echo e(URL::asset('build/images/user-illustarator-2.png')); ?>" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -597,7 +596,7 @@
                         </div>
                         <div class="col-sm-4">
                             <div class="px-3">
-                                <img src="{{ URL::asset('build/images/user-illustarator-1.png') }}" class="img-fluid" alt="">
+                                <img src="<?php echo e(URL::asset('build/images/user-illustarator-1.png')); ?>" class="img-fluid" alt="">
                             </div>
                         </div>
                     </div>
@@ -758,7 +757,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Stine Nielsen">
-                                                <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-1.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -766,7 +765,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Jansh Brown">
-                                                <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-2.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -774,7 +773,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Dan Gibson">
-                                                <img src="{{ URL::asset('build/images/users/avatar-3.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-3.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -813,7 +812,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Frida Bang">
-                                                <img src="{{ URL::asset('build/images/users/avatar-4.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-4.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -821,7 +820,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Malou Silva">
-                                                <img src="{{ URL::asset('build/images/users/avatar-5.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-5.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -829,7 +828,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Simon Schmidt">
-                                                <img src="{{ URL::asset('build/images/users/avatar-6.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-6.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -837,7 +836,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Tosh Jessen">
-                                                <img src="{{ URL::asset('build/images/users/avatar-7.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-7.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -876,7 +875,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Nina Schmidt">
-                                                <img src="{{ URL::asset('build/images/users/avatar-8.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-8.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -884,7 +883,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Stine Nielsen">
-                                                <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-1.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -892,7 +891,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Jansh Brown">
-                                                <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-2.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -931,7 +930,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Stine Nielsen">
-                                                <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-1.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -939,7 +938,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Jansh Brown">
-                                                <img src="{{ URL::asset('build/images/users/avatar-5.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-5.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -947,7 +946,7 @@
                                             <a href="javascript: void(0);" class="d-inline-block"
                                                 data-bs-toggle="tooltip" data-bs-placement="top" title=""
                                                 data-bs-original-title="Dan Gibson">
-                                                <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt=""
+                                                <img src="<?php echo e(URL::asset('build/images/users/avatar-2.jpg')); ?>" alt=""
                                                     class="rounded-circle avatar-xxs">
                                             </a>
                                         </div>
@@ -1160,17 +1159,17 @@
                                             <div class="d-inline-flex gap-2 border border-dashed p-2 mb-2 w-75">
                                                 <a href="apps-ecommerce-product-details"
                                                     class="bg-light rounded p-1">
-                                                    <img src="{{ URL::asset('build/images/products/img-8.png') }}" alt=""
+                                                    <img src="<?php echo e(URL::asset('build/images/products/img-8.png')); ?>" alt=""
                                                         class="img-fluid d-block" />
                                                 </a>
                                                 <a href="apps-ecommerce-product-details"
                                                     class="bg-light rounded p-1">
-                                                    <img src="{{ URL::asset('build/images/products/img-2.png') }}" alt=""
+                                                    <img src="<?php echo e(URL::asset('build/images/products/img-2.png')); ?>" alt=""
                                                         class="img-fluid d-block" />
                                                 </a>
                                                 <a href="apps-ecommerce-product-details"
                                                     class="bg-light rounded p-1">
-                                                    <img src="{{ URL::asset('build/images/products/img-10.png') }}" alt=""
+                                                    <img src="<?php echo e(URL::asset('build/images/products/img-10.png')); ?>" alt=""
                                                         class="img-fluid d-block" />
                                                 </a>
                                             </div>
@@ -1180,7 +1179,7 @@
                                     </div>
                                     <div class="acitivity-item py-3 d-flex">
                                         <div class="flex-shrink-0">
-                                            <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt=""
+                                            <img src="<?php echo e(URL::asset('build/images/users/avatar-2.jpg')); ?>" alt=""
                                                 class="avatar-xs rounded-circle acitivity-avatar">
                                         </div>
                                         <div class="flex-grow-1 ms-3">
@@ -1257,7 +1256,7 @@
                                     </div>
                                     <div class="acitivity-item d-flex">
                                         <div class="flex-shrink-0">
-                                            <img src="{{ URL::asset('build/images/users/avatar-3.jpg') }}" alt=""
+                                            <img src="<?php echo e(URL::asset('build/images/users/avatar-3.jpg')); ?>" alt=""
                                                 class="avatar-xs rounded-circle acitivity-avatar" />
                                         </div>
                                         <div class="flex-grow-1 ms-3">
@@ -1563,7 +1562,7 @@
                             <div class="d-flex">
                                 <div class="flex-shrink-0 avatar-xs">
                                     <span class="avatar-title bg-light p-1 rounded-circle">
-                                      <img src="{{ URL::asset('build/images/svg/crypto-icons/dash.svg' )}}" class="img-fluid"
+                                      <img src="<?php echo e(URL::asset('build/images/svg/crypto-icons/dash.svg' )); ?>" class="img-fluid"
                                       alt="">
                                     </span>
                                 </div>
@@ -1583,7 +1582,7 @@
                             <div class="d-flex">
                                 <div class="flex-shrink-0 avatar-xs">
                                     <span class="avatar-title bg-light p-1 rounded-circle">
-                                      <img src="{{ URL::asset('build/images/svg/crypto-icons/dash.svg' )}}" class="img-fluid"
+                                      <img src="<?php echo e(URL::asset('build/images/svg/crypto-icons/dash.svg' )); ?>" class="img-fluid"
                                             alt="">
                                     </span>
                                 </div>
@@ -1603,7 +1602,7 @@
                             <div class="d-flex">
                                 <div class="flex-shrink-0 avatar-xs">
                                     <span class="avatar-title bg-light p-1 rounded-circle">
-                                      <img src="{{ URL::asset('build/images/svg/crypto-icons/dash.svg' )}}" class="img-fluid"
+                                      <img src="<?php echo e(URL::asset('build/images/svg/crypto-icons/dash.svg' )); ?>" class="img-fluid"
                                             alt="">
                                     </span>
                                 </div>
@@ -1623,7 +1622,7 @@
                             <div class="d-flex">
                                 <div class="flex-shrink-0 avatar-xs">
                                     <span class="avatar-title bg-light p-1 rounded-circle">
-                                        <img src="{{ URL::asset('build/images/svg/crypto-icons/dash.svg' )}}" class="img-fluid"
+                                        <img src="<?php echo e(URL::asset('build/images/svg/crypto-icons/dash.svg' )); ?>" class="img-fluid"
                                             alt="">
                                     </span>
                                 </div>
@@ -1756,7 +1755,7 @@
                             <div class="swiper-slide" style="max-width: 200px;">
                                 <div>
                                     <div class="bg-info-subtle rounded">
-                                        <img src="{{ URL::asset('build/images/products/img-3.png') }}" alt=""
+                                        <img src="<?php echo e(URL::asset('build/images/products/img-3.png')); ?>" alt=""
                                             style="max-height: 210px;max-width: auto;" />
                                     </div>
                                     <div class="pt-3">
@@ -1771,7 +1770,7 @@
                             <div class="swiper-slide" style="max-width: 200px;">
                                 <div>
                                     <div class="bg-success-subtle rounded">
-                                        <img src="{{ URL::asset('build/images/products/img-4.png') }}" alt=""
+                                        <img src="<?php echo e(URL::asset('build/images/products/img-4.png')); ?>" alt=""
                                             style="max-height: 210px;max-width: auto;" />
                                     </div>
                                     <div class="pt-3">
@@ -1786,7 +1785,7 @@
                             <div class="swiper-slide" style="max-width: 200px;">
                                 <div>
                                     <div class="bg-warning-subtle rounded">
-                                        <img src="{{ URL::asset('build/images/products/img-5.png') }}" alt=""
+                                        <img src="<?php echo e(URL::asset('build/images/products/img-5.png')); ?>" alt=""
                                             style="max-height: 210px;max-width: auto;" />
                                     </div>
                                     <div class="pt-3">
@@ -1800,7 +1799,7 @@
                             <div class="swiper-slide" style="max-width: 200px;">
                                 <div>
                                     <div class="bg-secondary-subtle rounded">
-                                        <img src="{{ URL::asset('build/images/products/img-6.png') }}" alt=""
+                                        <img src="<?php echo e(URL::asset('build/images/products/img-6.png')); ?>" alt=""
                                             style="max-height: 210px;max-width: auto;" />
                                     </div>
                                     <div class="pt-3">
@@ -1823,7 +1822,7 @@
                     <div class="d-flex align-items-center mb-3">
                         <div class="avatar-sm me-3 flex-shrink-0">
                             <div class="avatar-title bg-info-subtle rounded">
-                                <img src="{{ URL::asset('build/images/products/img-6.png') }}" alt="" class="avatar-xs">
+                                <img src="<?php echo e(URL::asset('build/images/products/img-6.png')); ?>" alt="" class="avatar-xs">
                             </div>
                         </div>
                         <div class="flex-grow-1">
@@ -2026,7 +2025,7 @@
                     <div class="d-flex align-items-center mb-3">
                         <div class="avatar-sm me-3 flex-shrink-0">
                             <div class="avatar-title bg-danger-subtle rounded">
-                                <img src="{{ URL::asset('build/images/products/img-8.png') }}" alt="" class="avatar-xs">
+                                <img src="<?php echo e(URL::asset('build/images/products/img-8.png')); ?>" alt="" class="avatar-xs">
                             </div>
                         </div>
                         <div class="flex-grow-1">
@@ -2147,7 +2146,7 @@
                                         <a href="javascript:void(0);" class="d-flex align-items-center py-2">
                                             <div class="flex-shrink-0 me-2">
                                                 <div class="avatar-xs">
-                                                    <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt=""
+                                                    <img src="<?php echo e(URL::asset('build/images/users/avatar-1.jpg')); ?>" alt=""
                                                         class="img-fluid rounded-circle candidate-img">
                                                 </div>
                                             </div>
@@ -2163,7 +2162,7 @@
                                         <a href="javascript:void(0);" class="d-flex align-items-center py-2">
                                             <div class="flex-shrink-0 me-2">
                                                 <div class="avatar-xs">
-                                                    <img src="{{ URL::asset('build/images/users/avatar-2.jpg') }}" alt=""
+                                                    <img src="<?php echo e(URL::asset('build/images/users/avatar-2.jpg')); ?>" alt=""
                                                         class="img-fluid rounded-circle candidate-img">
                                                 </div>
                                             </div>
@@ -2179,7 +2178,7 @@
                                         <a href="javascript:void(0);" class="d-flex align-items-center py-2">
                                             <div class="flex-shrink-0 me-2">
                                                 <div class="avatar-xs">
-                                                    <img src="{{ URL::asset('build/images/users/avatar-3.jpg') }}" alt=""
+                                                    <img src="<?php echo e(URL::asset('build/images/users/avatar-3.jpg')); ?>" alt=""
                                                         class="img-fluid rounded-circle candidate-img">
                                                 </div>
                                             </div>
@@ -2194,7 +2193,7 @@
                                         <a href="javascript:void(0);" class="d-flex align-items-center py-2">
                                             <div class="flex-shrink-0 me-2">
                                                 <div class="avatar-xs">
-                                                    <img src="{{ URL::asset('build/images/users/avatar-4.jpg') }}" alt=""
+                                                    <img src="<?php echo e(URL::asset('build/images/users/avatar-4.jpg')); ?>" alt=""
                                                         class="img-fluid rounded-circle candidate-img">
                                                 </div>
                                             </div>
@@ -2210,7 +2209,7 @@
                                         <a href="javascript:void(0);" class="d-flex align-items-center py-2">
                                             <div class="flex-shrink-0 me-2">
                                                 <div class="avatar-xs">
-                                                    <img src="{{ URL::asset('build/images/users/avatar-5.jpg') }}" alt=""
+                                                    <img src="<?php echo e(URL::asset('build/images/users/avatar-5.jpg')); ?>" alt=""
                                                         class="img-fluid rounded-circle candidate-img">
                                                 </div>
                                             </div>
@@ -2229,7 +2228,7 @@
                     <div class="col-lg-6">
                         <div class="card-body text-center">
                             <div class="avatar-md mb-3 mx-auto">
-                                <img src="{{ URL::asset('build/images/users/avatar-1.jpg') }}" alt="" id="candidate-img"
+                                <img src="<?php echo e(URL::asset('build/images/users/avatar-1.jpg')); ?>" alt="" id="candidate-img"
                                     class="img-thumbnail rounded-circle shadow-none">
                             </div>
 
@@ -2452,24 +2451,26 @@
         <!-- end col -->
     </div>
     <!-- end row-->
-@endsection
-@section('script')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('script'); ?>
     <!-- apexcharts -->
-    <script src="{{ URL::asset('build/libs/apexcharts/apexcharts.min.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/libs/apexcharts/apexcharts.min.js')); ?>"></script>
 
     <!-- Vector map-->
-    <script src="{{ URL::asset('build/libs/jsvectormap/js/jsvectormap.min.js') }}"></script>
-    <script src="{{ URL::asset('build/libs/jsvectormap/maps/world-merc.js') }}"></script>
-    <script src="{{ URL::asset('build/libs/jsvectormap/maps/us-merc-en.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/libs/jsvectormap/js/jsvectormap.min.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('build/libs/jsvectormap/maps/world-merc.js')); ?>"></script>
+    <script src="<?php echo e(URL::asset('build/libs/jsvectormap/maps/us-merc-en.js')); ?>"></script>
     <!-- Swiper Js -->
-    <script src="{{ URL::asset('build/libs/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/libs/swiper/swiper-bundle.min.js')); ?>"></script>
 
-    <script src="{{ URL::asset('build/js/pages/form-input-spin.init.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/js/pages/form-input-spin.init.js')); ?>"></script>
 
-    <script src="{{ URL::asset('build/libs/card/card.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/libs/card/card.js')); ?>"></script>
 
     <!-- Widget init -->
-    <script src="{{ URL::asset('build/js/pages/widgets.init.js') }}"></script>
+    <script src="<?php echo e(URL::asset('build/js/pages/widgets.init.js')); ?>"></script>
 
-    <script src="{{ URL::asset('build/js/app.js') }}"></script>
-@endsection
+    <script src="<?php echo e(URL::asset('build/js/app.js')); ?>"></script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/vaneath/Desktop/laravel_default/resources/views/widgets.blade.php ENDPATH**/ ?>
