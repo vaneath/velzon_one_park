@@ -30,10 +30,13 @@ class UserFactory extends Factory
       'user_id' => random_int(100, 999),
       'first_name' => $this->faker->firstName,
       'last_name' => $this->faker->lastName,
+      'gender' => random_int(1, 2),
       'role' => random_int(1, 3),
       'department_id' => Department::all()->random()->id,
       'position_id' => Position::all()->random()->id,
       'password' => Hash::make('password'),
+      'joined_at' => $this->faker->date(),
+      'tel' => $this->faker->numerify('##########'),
     ];
   }
 }
