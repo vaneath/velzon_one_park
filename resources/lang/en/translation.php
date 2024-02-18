@@ -2,7 +2,7 @@
 return [
   "menu" => "Menu",
   "dashboards" => "Dashboards",
-  "employees" => "Employees",
+  "users" => "Users",
   "analytics" => "Analytics",
   "crm" => "CRM",
   "ecommerce" => "Ecommerce",

@@ -393,8 +393,8 @@
                 </li> <!-- end Dashboard Menu -->
 
                 <li class="nav-item">
-                  <a class="nav-link menu-link" href="employees">
-                      <i class="ri-honour-line"></i> <span><?php echo app('translator')->get('translation.employees'); ?></span>
+                  <a class="nav-link menu-link" href="users">
+                      <i class="ri-honour-line"></i> <span><?php echo app('translator')->get('translation.users'); ?></span>
                   </a>
                 </li>
 

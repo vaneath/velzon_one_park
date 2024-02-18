@@ -14,4 +14,9 @@ class Position extends Model
     'abbr',
     'department_id',
   ];
+
+  public function employees()
+  {
+    return $this->hasMany(User::class);
+  }
 }

@@ -10,6 +10,8 @@
 @slot('title') Application @endslot
 @endcomponent
 
+@props(['users'])
+
 <div class="row">
     <div class="col-lg-12">
         <div class="card" id="applicationList">
@@ -82,27 +84,17 @@
                     <ul class="nav nav-tabs nav-tabs-custom nav-success mb-3" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active All py-3" data-bs-toggle="tab" id="All" href="#" role="tab" aria-selected="true">
-                                All Application
+                                All Users
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link py-3 New" data-bs-toggle="tab" id="New" href="#" role="tab" aria-selected="false">
-                                New
+                                Employee
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link py-3 Pending" data-bs-toggle="tab" id="Pending" href="#" role="tab" aria-selected="false">
-                                Pending <span class="badge bg-danger align-middle ms-1">2</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-3 Approved" data-bs-toggle="tab" id="Approved" href="#" role="tab" aria-selected="false">
-                                Approved
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-3 Rejected" data-bs-toggle="tab" id="Rejected" href="#" role="tab" aria-selected="false">
-                                Rejected
+                                Admin
                             </a>
                         </li>
                     </ul>
@@ -116,38 +108,37 @@
                                             <input class="form-check-input" type="checkbox" id="checkAll" value="option">
                                         </div>
                                     </th>
-                                    <th class="sort" data-sort="id" style="width: 140px;">Application ID</th>
-                                    <th class="sort" data-sort="company">Company Name</th>
-                                    <th class="sort" data-sort="designation">Designation</th>
-                                    <th class="sort" data-sort="date">Apply Date</th>
+                                    <th class="sort" data-sort="id" style="width: 140px;">Employee Id</th>
+                                    <th class="sort" data-sort="company">Employee Name</th>
+                                    <th class="sort" data-sort="designation">Position</th>
+                                    <th class="sort" data-sort="date">Joint Date</th>
+                                    <th class="sort" data-sort="status">Seniority</th>
                                     <th class="sort" data-sort="contacts">Contacts</th>
-                                    <th class="sort" data-sort="type">Type</th>
-                                    <th class="sort" data-sort="status">Status</th>
                                     <th class="sort" data-sort="city">Action</th>
                                 </tr>
                             </thead>
-                            <tbody class="list form-check-all">
+                            <tbody>
+                              @foreach($users as $user)
                                 <tr>
                                     <th scope="row">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="checkAll" value="option1">
                                         </div>
                                     </th>
-                                    <td class="id"><a href="#" class="fw-medium link-primary">#VZ001</a></td>
+                                    <td class="id"><a href="#" class="fw-medium link-primary"># {{ $user->user_id }}</a></td>
                                     <td class="company">
                                         <div class="d-flex align-items-center">
                                             <div class="flex-shrink-0">
                                                 <img src="{{URL::asset('build/images/brands/slack.png')}}" alt="" class="avatar-xxs rounded-circle image_src object-fit-cover">
                                             </div>
-                                            <div class="flex-grow-1 ms-2">Syntyce Solutions</div>
+                                            <div class="flex-grow-1 ms-2">{{ $user->first_name}} {{ $user->last }}</div>
                                         </div>
                                     </td>
-                                    <td class="designation">Web Designer</td>
-                                    <td class="date">30 Sep,2022</td>
-                                    <td class="contacts">785-685-4616</td>
-                                    <td class="type">Full Time</td>
-                                    <td class="status"><span class="badge bg-danger-subtle text-danger text-uppercase">Rejected</span>
+                                    <td class="designation">{{ $user->position->name }}</td>
+                                    <td class="date">{{ $user->joined_at }}</td>
+                                    <td class="status"><span class="badge text-primary text-uppercase">{{ $user->seniority }}</span>
                                     </td>
+                                    <td class="contacts">{{ $user->tel }}</td>
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
@@ -168,6 +159,7 @@
                                         </ul>
                                     </td>
                                 </tr>
+                              @endforeach
                             </tbody>
                         </table>
                         <div class="noresult" style="display: none">
@@ -180,6 +172,9 @@
                     </div>
                     <div class="d-flex justify-content-end">
                         <div class="pagination-wrap hstack gap-2">
+                          {{ $users->links() }}
+                        </div>
+                        {{-- <div class="pagination-wrap hstack gap-2">
                             <a class="page-item pagination-prev disabled" href="#">
                                 Previous
                             </a>
@@ -187,7 +182,7 @@
                             <a class="page-item pagination-next" href="#">
                                 Next
                             </a>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
