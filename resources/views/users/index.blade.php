@@ -141,6 +141,11 @@
                                     <td class="contacts">{{ $user->tel }}</td>
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Calendar">
+                                              <a href="/calendar?user_id={{ $user->id }}" class="text-primary d-inline-block">
+                                                  <i class="ri-calendar-todo-line fs-16"></i>
+                                              </a>
+                                             </li>
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
                                                 <a href="apps-job-details" class="text-primary d-inline-block">
                                                     <i class="ri-eye-fill fs-16"></i>
@@ -174,15 +179,6 @@
                         <div class="pagination-wrap hstack gap-2">
                           {{ $users->links() }}
                         </div>
-                        {{-- <div class="pagination-wrap hstack gap-2">
-                            <a class="page-item pagination-prev disabled" href="#">
-                                Previous
-                            </a>
-                            <ul class="pagination listjs-pagination mb-0"></ul>
-                            <a class="page-item pagination-next" href="#">
-                                Next
-                            </a>
-                        </div> --}}
                     </div>
                 </div>
                 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

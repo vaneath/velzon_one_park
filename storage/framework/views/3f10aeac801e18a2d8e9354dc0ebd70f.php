@@ -77,10 +77,10 @@
                                 <div class="collapse menu-dropdown" id="sidebarCalendar">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item">
-                                            <a href="apps-calendar" class="nav-link"> <?php echo app('translator')->get('translation.main-calender'); ?> </a>
+                                            <a href="/apps-calendar" class="nav-link"> <?php echo app('translator')->get('translation.main-calender'); ?> </a>
                                         </li>
                                         <li class="nav-item">
-                                            <a href="apps-calendar-month-grid" class="nav-link"> <?php echo app('translator')->get('translation.month-grid'); ?> </a>
+                                            <a href="/apps-calendar-month-grid" class="nav-link"> <?php echo app('translator')->get('translation.month-grid'); ?> </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -393,7 +393,7 @@
                 </li> <!-- end Dashboard Menu -->
 
                 <li class="nav-item">
-                  <a class="nav-link menu-link" href="users">
+                  <a class="nav-link menu-link" href="<?php echo e(route('users.index')); ?>">
                       <i class="ri-honour-line"></i> <span><?php echo app('translator')->get('translation.users'); ?></span>
                   </a>
                 </li>

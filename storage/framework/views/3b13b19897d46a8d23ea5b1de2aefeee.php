@@ -151,6 +151,11 @@
                                     <td class="contacts"><?php echo e($user->tel); ?></td>
                                     <td>
                                         <ul class="list-inline hstack gap-2 mb-0">
+                                            <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="Calendar">
+                                              <a href="/calendar?user_id=<?php echo e($user->id); ?>" class="text-primary d-inline-block">
+                                                  <i class="ri-calendar-todo-line fs-16"></i>
+                                              </a>
+                                             </li>
                                             <li class="list-inline-item" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-placement="top" title="View">
                                                 <a href="apps-job-details" class="text-primary d-inline-block">
                                                     <i class="ri-eye-fill fs-16"></i>
@@ -185,7 +190,6 @@
                           <?php echo e($users->links()); ?>
 
                         </div>
-                        
                     </div>
                 </div>
                 <div class="modal fade" id="showModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

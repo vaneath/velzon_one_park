@@ -170,7 +170,6 @@ return [
     "level-3.1"=>"Level 3.1",
     "level-3.2"=>"Level 3.2",
     "project-list"=>"Project list",
-    "Apex_Line_Chart" => "Apex Line Chart",
     "Apex_Area_Chart" => "Apex Area Chart",
     "Apex_Column_Chart" => "Apex Column Chart",
     "Apex_Bar_Chart" => "Apex Bar Chart",
